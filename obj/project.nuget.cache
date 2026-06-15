@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "BS9PHRxuaCs=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\amrgh\\znet\\personalportfolio\\personalportfolio\\personalportfolio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\amrgh\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.6\\microsoft.aspnetcore.app.internal.assets.10.0.6.nupkg.sha512",
+    "C:\\Users\\amrgh\\.nuget\\packages\\microsoft.aspnetcore.components.web\\10.0.8\\microsoft.aspnetcore.components.web.10.0.8.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference Microsoft.AspNetCore.Components.Web will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
+      "projectPath": "C:\\Users\\amrgh\\znet\\personalportfolio\\personalportfolio\\personalportfolio.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\amrgh\\znet\\personalportfolio\\personalportfolio\\personalportfolio.csproj",
+      "libraryId": "Microsoft.AspNetCore.Components.Web",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title">Get In Touch</h3>
+        
+        @if (!string.IsNullOrEmpty(statusMessage))
+        {
+            <div class="alert @(isSuccess ? "alert-success" : "alert-danger")" role="alert">
+                @statusMessage
+            </div>
+        }
+        <EditForm Model="contactMessage" OnValidSubmit="HandleSubmit">
+            <DataAnnotationsValidator />
+            
+            <!-- Add form fields for Name, Email, Subject, Message -->
+            <!-- Include validation messages -->
+            <!-- Add submit button with loading state -->
+            
+        </EditForm>
+    </div>
+</div>
+@code {
+    private ContactMessage contactMessage = new();
+    private bool isSubmitting = false;
+    private bool isSuccess = false;
+    private string statusMessage = string.Empty;
+    private async Task HandleSubmit()
+    {
+        isSubmitting = true;
+        statusMessage = string.Empty;
+        try
+        {
+            // Simulate API call
+            await Task.Delay(1000);
+            
+            isSuccess = true;
+            statusMessage = "Thank you! Your message has been sent successfully.";
+            contactMessage = new ContactMessage(); // Reset form
+        }
+        catch (Exception)
+        {
+            isSuccess = false;
+            statusMessage = "Sorry, there was an error sending your message.";
+        }
+        finally
+        {
+            isSubmitting = false;
+        }
+    }
+}
