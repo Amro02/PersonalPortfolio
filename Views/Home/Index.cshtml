@@ -4,38 +4,155 @@
 <!-- Hero Section -->
 <section class="hero-section">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center gy-5">
             <div class="col-lg-6">
+                <span class="badge rounded-pill bg-white text-primary mb-4 px-4 py-2">Modern ASP.NET Portfolio</span>
                 <h1 class="display-4 fw-bold mb-4">Hello, I'm Amr Hesham</h1>
                 <h3 class="h4 mb-4 text-light">Full-Stack ASP.NET Core Developer</h3>
                 <p class="lead mb-4">
-                    I create modern, responsive web applications using ASP.NET Core, Blazor, 
-                    and the latest web technologies. Passionate about clean code and user experience.
+                    I create modern, responsive web applications using ASP.NET Core, Blazor, and the latest web technologies. Passionate about clean code, usability, and polished user experience.
                 </p>
-                <div class="d-flex gap-3">
-                    <a href="/Home/Projects" class="btn btn-light btn-lg">
+                <div class="d-flex flex-column flex-sm-row gap-3 hero-buttons">
+                    <a href="/Home/Projects" class="btn btn-light btn-lg shadow-sm">
                         <i class="fas fa-code me-2"></i>View My Work
                     </a>
-                    <a href="#contact" class="btn btn-outline-light btn-lg">
+                    <a href="#contact" class="btn btn-ghost btn-lg shadow-sm">
                         <i class="fas fa-envelope me-2"></i>Get In Touch
                     </a>
                 </div>
             </div>
-            <div class="col-lg-6 text-center">
-                <img src="/images/profile-photo.jpg" alt="Amr Hesham" class="img-fluid rounded-circle" style="max-width: 300px;">
+            <div class="col-lg-6">
+                <div class="hero-visual p-4">
+                    <div class="visual-card text-center">
+                        <div class="mb-4">
+                            <i class="fas fa-laptop-code fa-3x"></i>
+                        </div>
+                        <h3>Web apps with polish</h3>
+                        <p class="mb-3">Clean UI, strong accessibility, smooth interactions, and responsive layouts.</p>
+                        <div class="d-flex justify-content-center flex-wrap gap-2">
+                            <span class="skill-badge">ASP.NET Core</span>
+                            <span class="skill-badge">Blazor</span>
+                            <span class="skill-badge">JavaScript</span>
+                            <span class="skill-badge">CSS</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Contact Section -->
-<section id="contact" class="section-padding">
+<section class="section-padding bg-white">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="text-center mb-5">
-                    <h2 class="display-5 fw-bold">Let's Work Together</h2>
-                    <p class="lead">Ready to bring your project to life?</p>
+        <div class="section-title text-center">
+            <h2>What I build</h2>
+            <p class="mx-auto mw-75">Custom web applications, polished interfaces, and robust backend systems for clients who need a reliable digital presence.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body">
+                        <div class="icon mb-3"><i class="fas fa-rocket"></i></div>
+                        <h5 class="card-title">Modern Web Apps</h5>
+                        <p class="card-text text-muted-soft">Responsive, accessible, and fast experiences built with ASP.NET Core and JavaScript.</p>
+                    </div>
                 </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body">
+                        <div class="icon mb-3"><i class="fas fa-server"></i></div>
+                        <h5 class="card-title">Backend APIs</h5>
+                        <p class="card-text text-muted-soft">Clean architecture, secure endpoints, and data-driven services for real-world applications.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body">
+                        <div class="icon mb-3"><i class="fas fa-paint-brush"></i></div>
+                        <h5 class="card-title">UI &amp; Branding</h5>
+                        <p class="card-text text-muted-soft">Polished visuals, consistent color systems, and a layout that highlights your message.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section-padding">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+                <h2>Featured project</h2>
+                <p class="text-muted-soft">A sample polished project section that helps visitors quickly understand your strengths.</p>
+                <div class="card project-card border-0 overflow-hidden">
+                    <div class="card-body">
+                        <h5 class="card-title">Professional Portfolio</h5>
+                        <p class="card-text">A responsive portfolio website designed to present your skills, experience, and professional projects.</p>
+                        <a href="/Home/Projects" class="text-primary fw-semibold">Explore projects <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row g-3">
+                    <div class="col-6">
+                        <div class="card skill-card text-center py-4">
+                            <div class="card-body">
+                                <h5 class="card-title">ASP.NET</h5>
+                                <p class="text-muted-soft mb-0">Backend + MVC + API</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card skill-card text-center py-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Blazor</h5>
+                                <p class="text-muted-soft mb-0">Interactive UIs</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card skill-card text-center py-4">
+                            <div class="card-body">
+                                <h5 class="card-title">JavaScript</h5>
+                                <p class="text-muted-soft mb-0">Dynamic UX</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card skill-card text-center py-4">
+                            <div class="card-body">
+                                <h5 class="card-title">CSS</h5>
+                                <p class="text-muted-soft mb-0">Responsive styling</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact" class="section-padding bg-white">
+    <div class="container">
+        <div class="row g-4 align-items-start">
+            <div class="col-lg-5">
+                <div class="card feature-card h-100 p-4">
+                    <div class="card-body">
+                        <span class="badge bg-primary mb-3">Contact</span>
+                        <h2 class="h3 fw-bold mb-3">Let’s build something meaningful.</h2>
+                        <p class="text-muted-soft">Have a new project, a startup idea, or want to improve your web presence? Send a message and I’ll reply as soon as possible.</p>
+                        <ul class="list-unstyled mt-4 text-dark">
+                            <li class="mb-3"><strong>Email:</strong> <a href="mailto:amr.portfolio@example.com">amr.portfolio@example.com</a></li>
+                            <li class="mb-3"><strong>Phone:</strong> +20 111 234 5678</li>
+                            <li class="mb-3"><strong>Location:</strong> Cairo, Egypt</li>
+                        </ul>
+                        <div class="mt-4">
+                            <h5 class="mb-2">Available for</h5>
+                            <p class="text-muted-soft mb-0">Freelance work, contract projects, or full-time roles in web development and application architecture.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
                 <component type="typeof(personalportfolio.Components.ContactForm)" render-mode="ServerPrerendered" />
             </div>
         </div>

@@ -1,20 +1,49 @@
-<div class="card">
+<div class="card h-100">
     <div class="card-body">
-        <h3 class="card-title">Get In Touch</h3>
-        
+        <h3 class="card-title mb-4">Get In Touch</h3>
+
         @if (!string.IsNullOrEmpty(statusMessage))
         {
             <div class="alert @(isSuccess ? "alert-success" : "alert-danger")" role="alert">
                 @statusMessage
             </div>
         }
+
         <EditForm Model="contactMessage" OnValidSubmit="HandleSubmit">
             <DataAnnotationsValidator />
-            
-            <!-- Add form fields for Name, Email, Subject, Message -->
-            <!-- Include validation messages -->
-            <!-- Add submit button with loading state -->
-            
+            <ValidationSummary />
+
+            <div class="mb-3">
+                <label class="form-label" for="name">Name</label>
+                <InputText id="name" class="form-control" @bind-Value="contactMessage.Name" placeholder="Your full name" />
+                <ValidationMessage For="() => contactMessage.Name" class="text-danger" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="email">Email address</label>
+                <InputText id="email" type="email" class="form-control" @bind-Value="contactMessage.Email" placeholder="you@example.com" />
+                <ValidationMessage For="() => contactMessage.Email" class="text-danger" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="subject">Subject</label>
+                <InputText id="subject" class="form-control" @bind-Value="contactMessage.Subject" placeholder="Project idea, question, or request" />
+                <ValidationMessage For="() => contactMessage.Subject" class="text-danger" />
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label" for="message">Message</label>
+                <InputTextArea id="message" class="form-control" @bind-Value="contactMessage.Message" placeholder="Tell me about your project, timeline, or requirements" rows="5" />
+                <ValidationMessage For="() => contactMessage.Message" class="text-danger" />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" disabled="@isSubmitting">
+                @if (isSubmitting)
+                {
+                    <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                }
+                <span>@(isSubmitting ? "Sending..." : "Send Message")</span>
+            </button>
         </EditForm>
     </div>
 </div>
@@ -23,18 +52,17 @@
     private bool isSubmitting = false;
     private bool isSuccess = false;
     private string statusMessage = string.Empty;
+
     private async Task HandleSubmit()
     {
         isSubmitting = true;
         statusMessage = string.Empty;
         try
         {
-            // Simulate API call
             await Task.Delay(1000);
-            
             isSuccess = true;
             statusMessage = "Thank you! Your message has been sent successfully.";
-            contactMessage = new ContactMessage(); // Reset form
+            contactMessage = new ContactMessage();
         }
         catch (Exception)
         {
