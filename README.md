@@ -226,8 +226,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Author
 
 **Amr Hesham**
-- Email: [amr.portfolio@example.com](mailto:amr.portfolio@example.com)
-- Phone: +20 111 234 5678
+- Email: amrghandor77@gmail.com
+- Phone: +20 1159157932
 - Location: Cairo, Egypt
 
 ---
