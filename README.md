@@ -48,7 +48,7 @@ A modern, responsive personal portfolio website built with ASP.NET Core, Blazor,
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/personalportfolio.git
+   git clone https://github.com/Amro02/personalportfolio.git
    cd personalportfolio/personalportfolio
    ```
 
